@@ -9,6 +9,10 @@ R code from my dissertation at the University of Greenwich (2026). It tests whet
 - **Leakage control:** imputation, filtering and feature screening are fitted on training folds only, and the other outcomes are removed from each analysis.
 - **Comparison:** 91 model configurations.
 
+![Analysis pipeline, from dataset to scoring](results/figures/F01_pipeline_flowchart.png)
+
+![What is learned from training folds and applied to the held-out fold](results/figures/F02_inside_one_fold.png)
+
 ## Key result and limitations
 
 | Outcome | Best model | Balanced accuracy |
@@ -16,6 +20,10 @@ R code from my dissertation at the University of Greenwich (2026). It tests whet
 | Gentamicin resistance | Random forest | 0.81 |
 | Resistance phenotype | Random forest | 0.82 |
 | Mechanical ventilation | Random forest | 0.56 (near chance, rejected) |
+
+![Balanced accuracy for each outcome and model against a 0.50 chance line](results/figures/F04_model_vs_chance.png)
+
+Full metrics and a dataset summary are in [results/summary_tables.md](results/summary_tables.md).
 
 These are internal cross-validation results from my dissertation on a small sample (n = 30), with no separate test set, so the work is exploratory. Antibiotic test results were among the predictors, which may inflate the resistance scores, and tuning was not nested. Results can vary slightly with package versions.
 
@@ -55,7 +63,7 @@ Package versions are locked with `renv`, and they may differ from those used for
 
 ## Honesty note
 
-I designed the analysis and ran and interpreted all models. Parts of the code were written with AI assistance, which I reviewed and tested.
+I designed the analysis and ran and interpreted all models. Parts of the code were written with AI assistance so I could focus on learning the methods. I reviewed and tested that code, and I am developing my skills by working through it.
 
 ## Licence
 
