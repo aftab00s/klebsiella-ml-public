@@ -23,7 +23,9 @@ R code from my dissertation at the University of Greenwich (2026). It tests whet
 
 ![Balanced accuracy for each outcome and model against a 0.50 chance line](results/figures/F04_model_vs_chance.png)
 
-Full metrics and a dataset summary are in [results/summary_tables.md](results/summary_tables.md).
+![ROC curves for gentamicin resistance and mechanical ventilation](results/figures/F08_roc.png)
+
+Full metrics and a dataset summary are in [results/summary_tables.md](results/summary_tables.md). Individual confusion matrix cell counts are left out to protect privacy, because group sizes are small.
 
 These are internal cross-validation results from my dissertation on a small sample (n = 30), with no separate test set, so the work is exploratory. Antibiotic test results were among the predictors, which may inflate the resistance scores, and tuning was not nested. Results can vary slightly with package versions.
 
