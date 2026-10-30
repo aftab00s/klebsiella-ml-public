@@ -1,0 +1,10 @@
+data/
+*.csv
+*.xlsx
+*.tsv
+*.rds
+*.RData
+.Rhistory
+.Rproj.user/
+.DS_Store
+results/output/
